@@ -22,10 +22,10 @@ public sealed partial class MovieWindow : Window
     {
         this.InitializeComponent();
         VideoView.Initialized += VideoView_Initialized;
-        Closed += MainWindow_Closed;
+        Closed += MovieWindow_Closed;
     }
 
-    private void MainWindow_Closed(object sender, WindowEventArgs args)
+    private void MovieWindow_Closed(object sender, WindowEventArgs args)
     {
         mp.Stopped += (s, e) =>
         {
